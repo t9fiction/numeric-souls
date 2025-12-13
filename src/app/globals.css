@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* LIGHT: Refined Zinc-50 Paper White */
+  /* Background: Zinc-50 #fafafa */
+  --background: #fafafa;
+  /* Foreground: Zinc-900 #18181b - Softer black */
+  --foreground: #18181b;
+  
+  /* Card: White #ffffff on top of Zinc-50 */
+  --card: #ffffff;
+  --card-foreground: #18181b;
+  
+  --popover: #ffffff;
+  --popover-foreground: #18181b;
+  
+  /* Primary: Zinc-900 */
+  --primary: #18181b;
+  --primary-foreground: #fafafa;
+  
+  /* Secondary: Zinc-100 #f4f4f5 */
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  
+  /* Muted: Zinc-100 */
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a; /* Zinc-500 */
+  
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+  
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  
+  /* Border: Zinc-200 #e4e4e7 */
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #18181b;
+  
+  --radius: 0rem;
 }
 
-@theme inline {
+.dark {
+  /* DARK: Refined Zinc-950 Charcoal */
+  /* Background: Zinc-950 #09090b */
+  --background: #09090b;
+  /* Foreground: Zinc-50 #fafafa */
+  --foreground: #fafafa;
+  
+  /* Card: Zinc-900 #18181b */
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  
+  --popover: #18181b;
+  --popover-foreground: #fafafa;
+  
+  /* Primary: Zinc-50 */
+  --primary: #fafafa;
+  --primary-foreground: #18181b;
+  
+  /* Secondary: Zinc-800 #27272a */
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+  
+  /* Muted: Zinc-900 */
+  --muted: #18181b;
+  --muted-foreground: #a1a1aa; /* Zinc-400 */
+  
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
+  
+  --destructive: #7f1d1d;
+  --destructive-foreground: #fef2f2;
+  
+  /* Border: Zinc-800 #27272a */
+  --border: #27272a;
+  --input: #27272a;
+  --ring: #d4d4d8;
+}
+
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Grid Utility - Adaptive */
+.bg-grid-white {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  opacity: 0.3;
+}
+
+.bg-grid-small-white {
+  background-size: 20px 20px;
+  background-image: linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  opacity: 0.3;
 }
