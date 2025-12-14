@@ -7,6 +7,7 @@ import { Menu, X, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { cn } from "@/lib/utils";
+import Logo3D from "@/components/ui/Logo3D";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,9 +40,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-8 h-8 flex items-center justify-center text-primary border border-primary/20 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                <Code2 size={20} />
-              </div>
+              <Logo3D />
               <span className="text-xl font-bold tracking-tighter text-foreground">
                 Numeric Shift
               </span>

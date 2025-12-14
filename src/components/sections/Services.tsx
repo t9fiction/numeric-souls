@@ -2,8 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Smartphone, Bot, Globe, Database, Palette, Blocks } from "lucide-react";
+import { Code, Smartphone, Bot, Globe, Database, Blocks } from "lucide-react";
 import { cn } from "@/lib/utils";
+import AnimatedGrid from "@/components/ui/AnimatedGrid";
 
 const services = [
   {
@@ -40,8 +41,13 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-32 bg-secondary relative border-t border-border transition-colors duration-300">
+    <section id="services" className="py-32 bg-secondary relative border-t border-border transition-colors duration-300 overflow-hidden">
       <div className="absolute inset-0 bg-grid-small-white/[0.1] pointer-events-none" />
+      
+      {/* 3D Animated Grid */}
+      <div className="absolute inset-0 opacity-30">
+        <AnimatedGrid />
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">

@@ -5,12 +5,18 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Terminal } from "lucide-react";
 import AmbientBackground from "@/components/ui/AmbientBackground";
+import FloatingGeometry from "@/components/ui/FloatingGeometry";
 
 const Hero = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden bg-background transition-colors duration-300">
       {/* Ambient Background & Grid */}
       <AmbientBackground />
+      
+      {/* 3D Floating Geometry */}
+      <div className="absolute inset-0 opacity-60">
+        <FloatingGeometry />
+      </div>
       
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
       

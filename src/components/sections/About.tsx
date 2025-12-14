@@ -5,6 +5,7 @@ import Image from "next/image";
 import teamCollabImage from "@/assets/images/team-collab.png";
 import { motion } from "framer-motion";
 import { Users, Target, CheckCircle2 } from "lucide-react";
+import ParticleField from "@/components/ui/ParticleField";
 
 const stats = [
   { label: "Combined Experience", value: "50+ Years" },
@@ -15,7 +16,12 @@ const stats = [
 const About = () => {
   return (
     <section id="about" className="py-32 bg-secondary relative overflow-hidden transition-colors duration-300">
-      <div className="container mx-auto px-4">
+      {/* 3D Particle Field */}
+      <div className="absolute inset-0 opacity-20">
+        <ParticleField />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Image Side */}

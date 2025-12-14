@@ -3,6 +3,7 @@
 import { motion, useInView, useSpring, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { TrendingUp, Users, CheckCircle, BarChart3 } from "lucide-react";
+import DataVisualization from "@/components/ui/DataVisualization";
 
 // Hook removed in favor of framer-motion springs within the component for better performance
 
@@ -82,6 +83,11 @@ export default function Stats() {
   return (
     <section id="stats" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-secondary/30 -skew-y-2 pointer-events-none" />
+      
+      {/* 3D Data Visualization Background */}
+      <div className="absolute inset-0 opacity-20">
+        <DataVisualization />
+      </div>
       
       <div className="container px-4 mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
