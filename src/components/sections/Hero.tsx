@@ -36,7 +36,7 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "circOut" }}
           className="max-w-4xl mx-auto mb-6 text-6xl font-bold tracking-tighter md:text-8xl lg:text-9xl text-foreground"
         >
-          PRECISION <br /> ENGINEERED
+          Your Vision<br />ENGINEERED
         </motion.h1>
 
         <motion.p

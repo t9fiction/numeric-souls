@@ -1,12 +1,14 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    id: "apex-finance",
     title: "Apex Finance",
     category: "Fintech Platform",
     description: "Real-time trading analytics dashboard.",
@@ -14,6 +16,7 @@ const projects = [
     tags: ["Next.js", "D3.js"],
   },
   {
+    id: "vortex-commerce",
     title: "Vortex Commerce",
     category: "E-Commerce",
     description: "Headless commerce solution.",
@@ -21,6 +24,7 @@ const projects = [
     tags: ["Shopify", "React"],
   },
   {
+    id: "nexus-ai",
     title: "Nexus AI",
     category: "Machine Learning",
     description: "Generative model interface.",
@@ -55,7 +59,9 @@ const Portfolio = () => {
             >
               <div className="flex justify-between w-full mb-12">
                  <span className="font-mono text-xs text-muted-foreground">{project.year}</span>
-                 <ArrowUpRight className="text-muted-foreground group-hover:text-foreground transition-colors" size={20} />
+                 <Link href={`/work/${project.id}`}>
+                    <ArrowUpRight className="text-muted-foreground group-hover:text-foreground transition-colors cursor-pointer hover:scale-110" size={20} />
+                 </Link>
               </div>
               
               <div className="mt-auto">
