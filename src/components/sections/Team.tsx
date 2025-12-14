@@ -107,9 +107,9 @@ export default function Team() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className="relative overflow-hidden rounded-2xl bg-card border border-border/50 hover:border-primary/50 transition-colors duration-300 h-full">
+              <div className="relative overflow-hidden rounded-none bg-card border border-border/50 hover:border-primary/50 transition-colors duration-300 h-full p-4">
                 {/* Image Container */}
-                <div className="aspect-[4/5] relative overflow-hidden">
+                <div className="aspect-[4/5] relative overflow-hidden border border-border/50 bg-muted/20 w-full">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -123,19 +123,19 @@ export default function Team() {
                   <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <a
                       href={member.social.linkedin}
-                      className="p-2 rounded-full bg-background/80 backdrop-blur-sm border border-border hover:bg-primary hover:text-white transition-colors"
+                      className="p-2 rounded-none bg-background/80 backdrop-blur-sm border border-border hover:bg-primary hover:text-white transition-colors"
                     >
                       <Linkedin className="w-4 h-4" />
                     </a>
                     <a
                       href={member.social.twitter}
-                      className="p-2 rounded-full bg-background/80 backdrop-blur-sm border border-border hover:bg-primary hover:text-white transition-colors"
+                      className="p-2 rounded-none bg-background/80 backdrop-blur-sm border border-border hover:bg-primary hover:text-white transition-colors"
                     >
                       <Twitter className="w-4 h-4" />
                     </a>
                     <a
                       href={member.social.github}
-                      className="p-2 rounded-full bg-background/80 backdrop-blur-sm border border-border hover:bg-primary hover:text-white transition-colors"
+                      className="p-2 rounded-none bg-background/80 backdrop-blur-sm border border-border hover:bg-primary hover:text-white transition-colors"
                     >
                       <Github className="w-4 h-4" />
                     </a>

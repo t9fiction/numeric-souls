@@ -71,10 +71,10 @@ const StatCard = ({ stat }: { stat: typeof stats[0] }) => {
   return (
     <div
       ref={ref}
-      className="p-6 rounded-2xl bg-card border border-border hover:border-border/80 transition-all duration-300 hover:shadow-lg"
+      className="p-6 rounded-none bg-card border border-border hover:border-border/80 transition-all duration-300 hover:shadow-lg"
     >
       <div className="flex items-start justify-between mb-4">
-        <div className={`p-3 rounded-xl ${stat.bg}`}>
+        <div className={`p-3 rounded-none ${stat.bg}`}>
           <stat.icon className={`w-6 h-6 ${stat.color}`} />
         </div>
       </div>
@@ -109,9 +109,9 @@ export default function Stats() {
             </div>
 
             {/* Custom SVG Graph Animation */}
-            <div className="relative h-64 bg-card rounded-2xl border border-border p-6 overflow-hidden shadow-sm">
+            <div className="relative h-64 bg-card rounded-none border border-border p-6 overflow-hidden shadow-sm">
               <div className="absolute top-0 right-0 p-4">
-                <div className="flex items-center gap-2 text-sm text-emerald-500 bg-emerald-500/10 px-3 py-1 rounded-full font-medium">
+                <div className="flex items-center gap-2 text-sm text-emerald-500 bg-emerald-500/10 px-3 py-1 rounded-none font-medium">
                   <TrendingUp className="w-4 h-4" />
                   +24% vs last year
                 </div>
