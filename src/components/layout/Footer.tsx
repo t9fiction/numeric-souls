@@ -23,20 +23,20 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-foreground mb-4 uppercase tracking-wide text-sm">Services</h3>
             <ul className="space-y-2 text-sm text-muted-foreground font-mono">
-              <li><Link href="#" className="hover:text-foreground transition-colors">Web Development</Link></li>
-              <li><Link href="#" className="hover:text-foreground transition-colors">Mobile Apps</Link></li>
-              <li><Link href="#" className="hover:text-foreground transition-colors">UI/UX Design</Link></li>
-              <li><Link href="#" className="hover:text-foreground transition-colors">System Architecture</Link></li>
+              <li><Link href="/#services" className="hover:text-foreground transition-colors">Web Development</Link></li>
+              <li><Link href="/#services" className="hover:text-foreground transition-colors">Mobile Apps</Link></li>
+              <li><Link href="/#services" className="hover:text-foreground transition-colors">UI/UX Design</Link></li>
+              <li><Link href="/#services" className="hover:text-foreground transition-colors">System Architecture</Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-bold text-foreground mb-4 uppercase tracking-wide text-sm">Company</h3>
             <ul className="space-y-2 text-sm text-muted-foreground font-mono">
-              <li><Link href="#" className="hover:text-foreground transition-colors">About Us</Link></li>
-              <li><Link href="#" className="hover:text-foreground transition-colors">Careers</Link></li>
-              <li><Link href="#" className="hover:text-foreground transition-colors">Press</Link></li>
-              <li><Link href="#" className="hover:text-foreground transition-colors">Contact</Link></li>
+              <li><Link href="/#about" className="hover:text-foreground transition-colors">About Us</Link></li>
+              <li><Link href="/#contact" className="hover:text-foreground transition-colors">Careers</Link></li>
+              <li><Link href="/#contact" className="hover:text-foreground transition-colors">Press</Link></li>
+              <li><Link href="/#contact" className="hover:text-foreground transition-colors">Contact</Link></li>
             </ul>
           </div>
           

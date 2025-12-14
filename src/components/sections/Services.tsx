@@ -5,37 +5,44 @@ import { motion } from "framer-motion";
 import { Code, Smartphone, Bot, Globe, Database, Blocks } from "lucide-react";
 import { cn } from "@/lib/utils";
 import AnimatedGrid from "@/components/ui/AnimatedGrid";
+import Link from "next/link";
 
 const services = [
   {
-    title: "Enterprise Software Development",
-    description: "Custom enterprise applications built with modern frameworks and best practices.",
-    icon: <Code size={24} />,
-  },
-  {
-    title: "Cloud Architecture & DevOps",
-    description: "Scalable cloud infrastructure with automated deployment and monitoring.",
-    icon: <Database size={24} />,
-  },
-  {
-    title: "Digital Transformation",
-    description: "Legacy system modernization and digital workflow optimization.",
-    icon: <Globe size={24} />,
-  },
-  {
-    title: "AI & Machine Learning",
-    description: "Intelligent automation and data-driven decision support systems.",
+    title: "Agentic AI & Automation",
+    description: "LLMs, autonomous agents, and intelligent workflow automation.",
     icon: <Bot size={24} />,
+    slug: "agentic-ai-automation",
   },
   {
-    title: "Mobile Application Development",
-    description: "Native and cross-platform mobile solutions for enterprise use.",
-    icon: <Smartphone size={24} />,
-  },
-  {
-    title: "System Integration",
-    description: "Seamless integration of enterprise systems and third-party services.",
+    title: "Blockchain Solutions",
+    description: "Smart contracts, decentralized apps (dApps), and Web3 integration.",
     icon: <Blocks size={24} />,
+    slug: "blockchain-solutions",
+  },
+  {
+    title: "Web Architecture",
+    description: "Enterprise-grade web applications with React and Next.js.",
+    icon: <Code size={24} />,
+    slug: "web-architecture",
+  },
+  {
+    title: "Cloud Infrastructure",
+    description: "Serverless architecture and DevOps automation.",
+    icon: <Database size={24} />,
+    slug: "cloud-infrastructure",
+  },
+  {
+    title: "Mobile Ecosystems",
+    description: "Cross-platform solutions for iOS and Android.",
+    icon: <Smartphone size={24} />,
+    slug: "mobile-ecosystems",
+  },
+  {
+    title: "Design Systems",
+    description: "Pixel-perfect UI/UX that scales with your brand.",
+    icon: <Globe size={24} />,
+    slug: "design-systems",
   },
 ];
 
@@ -65,19 +72,23 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group p-10 bg-background hover:bg-muted/50 transition-colors relative overflow-hidden"
             >
-              <div className="mb-8 w-10 h-10 flex items-center justify-center bg-transparent border border-foreground/20 text-foreground rounded-none group-hover:bg-foreground group-hover:text-background transition-all duration-300">
-                {service.icon}
-              </div>
-              
-              <h3 className="text-xl font-bold mb-4 tracking-tight text-foreground">{service.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground/80 transition-colors">
-                {service.description}
-              </p>
-              
-              {/* Corner Accent */}
-              <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-foreground/30 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <Link 
+                href={`/services/${service.slug}`}
+                className="group p-10 bg-background hover:bg-muted/50 transition-colors relative overflow-hidden block h-full"
+              >
+                <div className="mb-8 w-10 h-10 flex items-center justify-center bg-transparent border border-foreground/20 text-foreground rounded-none group-hover:bg-foreground group-hover:text-background transition-all duration-300">
+                  {service.icon}
+                </div>
+                
+                <h3 className="text-xl font-bold mb-4 tracking-tight text-foreground">{service.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-foreground/80 transition-colors">
+                  {service.description}
+                </p>
+                
+                {/* Corner Accent */}
+                <div className="absolute top-0 right-0 w-3 h-3 border-t border-r border-foreground/30 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </Link>
             </motion.div>
           ))}
         </div>
