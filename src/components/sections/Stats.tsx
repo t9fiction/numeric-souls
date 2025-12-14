@@ -1,30 +1,10 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useSpring, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { TrendingUp, Users, CheckCircle, BarChart3 } from "lucide-react";
 
-// Hook for animated numbers
-function useCounter(end: number, duration: number = 2) {
-  const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (isInView) {
-      let startTime: number;
-      const animate = (time: number) => {
-        if (!startTime) startTime = time;
-        const progress = Math.min((time - startTime) / (duration * 1000), 1);
-        setCount(Math.floor(progress * end));
-        if (progress < 1) requestAnimationFrame(animate);
-      };
-      requestAnimationFrame(animate);
-    }
-  }, [end, duration, isInView]);
-
-  return { ref, count };
-}
+// Hook removed in favor of framer-motion springs within the component for better performance
 
 const stats = [
   {
@@ -66,7 +46,18 @@ const stats = [
 ];
 
 const StatCard = ({ stat }: { stat: typeof stats[0] }) => {
-  const { ref, count } = useCounter(stat.value);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  
+  // Use a spring for smooth counting animation
+  const spring = useSpring(0, { mass: 1, stiffness: 50, damping: 15 });
+  const display = useTransform(spring, (current: number) => Math.round(current));
+
+  useEffect(() => {
+    if (isInView) {
+      spring.set(stat.value);
+    }
+  }, [isInView, stat.value, spring]);
 
   return (
     <div
@@ -79,7 +70,7 @@ const StatCard = ({ stat }: { stat: typeof stats[0] }) => {
         </div>
       </div>
       <div className="flex items-baseline gap-1">
-        <span className="text-4xl font-bold tracking-tight">{count}</span>
+        <motion.span className="text-4xl font-bold tracking-tight">{display}</motion.span>
         <span className={`text-xl font-medium ${stat.color}`}>{stat.suffix}</span>
       </div>
       <p className="text-muted-foreground mt-2 font-medium">{stat.name}</p>
