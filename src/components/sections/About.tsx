@@ -29,7 +29,7 @@ const About = () => {
             <div className="relative aspect-square w-full max-w-md mx-auto lg:max-w-full overflow-hidden rounded-sm border border-border">
               <Image
                 src={teamCollabImage}
-                alt="Lumina engineers collaborating"
+                alt="Numeric Shift engineers collaborating"
                 fill
                 className="object-cover"
                 placeholder="blur"
@@ -64,7 +64,7 @@ const About = () => {
               Innovators by Nature. <br /> Builders by Trade.
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              Lumina was founded on a simple premise: Enterprise software doesn't have to be boring. We bridge the gap between heavy-duty engineering and intuitive, human experience.
+              Numeric Shift was founded on a simple premise: Enterprise software doesn't have to be boring. We bridge the gap between heavy-duty engineering and intuitive, human experience.
             </p>
             
             <ul className="space-y-4 mb-8">

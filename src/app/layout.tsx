@@ -18,8 +18,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lumina | Precision Engineering",
-  description: "Lumina is a premium software house building digital infrastructure.",
+  title: "Numeric Shift | Precision Engineering",
+  description: "Numeric Shift is a premium software house building digital infrastructure.",
 };
 
 export default function RootLayout({

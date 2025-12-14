@@ -43,7 +43,7 @@ const Navbar = () => {
                 <Code2 size={20} />
               </div>
               <span className="text-xl font-bold tracking-tighter text-foreground">
-                LUMINA
+                Numeric Shift
               </span>
             </Link>
           </div>

@@ -12,7 +12,7 @@ const Footer = () => {
                 <Code2 size={20} />
               </div>
               <span className="text-xl font-bold tracking-tighter text-foreground">
-                LUMINA
+                Numeric Shift
               </span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs font-mono text-muted-foreground">© {new Date().getFullYear()} LUMINA SYSTEMS. ALL RIGHTS RESERVED.</p>
+          <p className="text-xs font-mono text-muted-foreground">© {new Date().getFullYear()} NUMERIC SHIFT. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-6 text-xs font-mono text-muted-foreground">
             <Link href="#" className="hover:text-foreground">PRIVACY</Link>
             <Link href="#" className="hover:text-foreground">TERMS</Link>
