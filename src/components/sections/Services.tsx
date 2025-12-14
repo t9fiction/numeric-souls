@@ -7,24 +7,19 @@ import { cn } from "@/lib/utils";
 
 const services = [
   {
-    title: "Web Architecture",
-    description: "Enterprise-grade web applications with React and Next.js.",
-    icon: <Code size={24} />,
-  },
-  {
-    title: "Mobile Ecosystems",
-    description: "Cross-platform solutions for iOS and Android.",
-    icon: <Smartphone size={24} />,
-  },
-  {
     title: "Agentic AI & Automation",
     description: "LLMs, autonomous agents, and intelligent workflow automation.",
     icon: <Bot size={24} />,
   },
   {
-    title: "Design Systems",
-    description: "Pixel-perfect UI/UX that scales with your brand.",
-    icon: <Palette size={24} />,
+    title: "Blockchain Solutions",
+    description: "Smart contracts, decentralized apps (dApps), and Web3 integration.",
+    icon: <Blocks size={24} />,
+  },
+  {
+    title: "Web Architecture",
+    description: "Enterprise-grade web applications with React and Next.js.",
+    icon: <Code size={24} />,
   },
   {
     title: "Cloud Infrastructure",
@@ -32,9 +27,14 @@ const services = [
     icon: <Database size={24} />,
   },
   {
-    title: "Blockchain Solutions",
-    description: "Smart contracts, decentralized apps (dApps), and Web3 integration.",
-    icon: <Blocks size={24} />,
+    title: "Mobile Ecosystems",
+    description: "Cross-platform solutions for iOS and Android.",
+    icon: <Smartphone size={24} />,
+  },
+  {
+    title: "Design Systems",
+    description: "Pixel-perfect UI/UX that scales with your brand.",
+    icon: <Palette size={24} />,
   },
 ];
 
