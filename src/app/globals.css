@@ -137,3 +137,7 @@ body {
     linear-gradient(to bottom, var(--border) 1px, transparent 1px);
   opacity: 0.15;
 }
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}

@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Terminal } from "lucide-react";
+import Floating3DShapes from "@/components/ui/Floating3DShapes";
 
 const Hero = () => {
   return (
@@ -11,6 +12,9 @@ const Hero = () => {
       {/* Grid Background - Adaptive */}
       <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:50px_50px] pointer-events-none dark:opacity-100 opacity-50" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
+      
+      {/* 3D Floating Elements */}
+      <Floating3DShapes />
       
       {/* Beam Effect - Adaptive */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-foreground/5 rounded-full blur-[100px] opacity-20 pointer-events-none" />

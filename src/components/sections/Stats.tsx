@@ -38,7 +38,7 @@ const stats = [
   },
   {
     id: 2,
-    name: "Happy Clients",
+    name: "Ventures Empowered",
     value: 50,
     suffix: "+",
     icon: Users,
