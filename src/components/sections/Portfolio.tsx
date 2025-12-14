@@ -31,7 +31,7 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <section id="work" className="py-32 bg-background border-t border-border transition-colors duration-300">
+    <section id="portfolio" className="py-32 bg-background transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b border-border pb-8">
           <div>

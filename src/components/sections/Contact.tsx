@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 relative bg-background border-t border-border transition-colors duration-300">
+    <section id="contact" className="py-32 bg-background transition-colors duration-300">
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16">
           <motion.div

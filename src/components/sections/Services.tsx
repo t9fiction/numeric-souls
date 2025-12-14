@@ -40,7 +40,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-32 bg-background relative border-t border-border transition-colors duration-300">
+    <section id="services" className="py-32 bg-secondary relative border-t border-border transition-colors duration-300">
       <div className="absolute inset-0 bg-grid-small-white/[0.1] pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
