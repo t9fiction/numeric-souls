@@ -42,9 +42,9 @@ const About = () => {
                   <Users size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground mb-1">Human-Centric Tech</h4>
+                  <h4 className="font-bold text-foreground mb-1">Enterprise Excellence</h4>
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    We believe in building software that doesn&apos;t just work—it evolves. Our philosophy is rooted in precision engineering and user-centric design.
+                    We deliver robust, scalable solutions that meet the highest standards of enterprise software development and security compliance.
                   </p>
                 </div>
               </div>
@@ -59,16 +59,16 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="order-1 lg:order-2"
           >
-            <span className="text-primary font-semibold text-sm uppercase tracking-widest">Who We Are</span>
+            <span className="text-primary font-semibold text-sm uppercase tracking-widest">Our Company</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-6 text-foreground tracking-tight">
-              Innovators by Nature. <br /> Builders by Trade.
+              Trusted Technology Partner. <br /> Proven Results.
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              Numeric Shift was founded on a simple premise: Enterprise software doesn't have to be boring. We bridge the gap between heavy-duty engineering and intuitive, human experience.
+              Numeric Shift delivers enterprise-grade software solutions with a focus on scalability, security, and performance. Our team of senior engineers and architects brings decades of experience in building mission-critical systems for global organizations.
             </p>
             
             <ul className="space-y-4 mb-8">
-              {["Strategic Consulting", "Full-Cycle Development", "Long-Term Scalability"].map((item, i) => (
+              {["Enterprise Architecture & Consulting", "Custom Software Development", "Digital Transformation Solutions"].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-foreground font-medium">
                   <CheckCircle2 className="text-primary w-5 h-5" />
                   {item}

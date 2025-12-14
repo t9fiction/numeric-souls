@@ -18,10 +18,10 @@ const Contact = () => {
             transition={{ duration: 0.5 }}
             className="lg:w-1/2"
           >
-            <span className="text-muted-foreground font-mono text-xs uppercase tracking-widest">TRANSMISSION</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-6 text-foreground tracking-tighter">INITIATE CONTACT</h2>
+            <span className="text-muted-foreground font-mono text-xs uppercase tracking-widest">Get In Touch</span>
+            <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-6 text-foreground tracking-tighter">Start Your Project</h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              Ready to deploy your next project? Establish a connection with our engineering team.
+              Ready to transform your business with enterprise software solutions? Contact our team to discuss your project requirements.
             </p>
 
             <div className="space-y-8">
@@ -50,8 +50,8 @@ const Contact = () => {
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold text-foreground uppercase tracking-wide text-sm">HQ</h4>
-                  <p className="text-muted-foreground font-mono text-sm">100 Innovation Dr, Tech City</p>
+                  <h4 className="font-bold text-foreground uppercase tracking-wide text-sm">Office</h4>
+                  <p className="text-muted-foreground font-mono text-sm">123 Business District, Suite 400</p>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ const Contact = () => {
                       id="name"
                       type="text"
                       className="w-full h-12 px-4 rounded-none border border-input bg-background focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-muted-foreground/50"
-                      placeholder="ENTER NAME"
+                      placeholder="Your Name"
                     />
                   </div>
                   <div className="space-y-2">
@@ -82,7 +82,7 @@ const Contact = () => {
                       id="email"
                       type="email"
                       className="w-full h-12 px-4 rounded-none border border-input bg-background focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-muted-foreground/50"
-                      placeholder="ENTER EMAIL"
+                      placeholder="Your Email"
                     />
                   </div>
                 </div>
@@ -93,7 +93,7 @@ const Contact = () => {
                     id="subject"
                     type="text"
                     className="w-full h-12 px-4 rounded-none border border-input bg-background focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-muted-foreground/50"
-                    placeholder="INQUIRY TYPE"
+                    placeholder="Project Subject"
                   />
                 </div>
                 
@@ -103,12 +103,12 @@ const Contact = () => {
                     id="message"
                     rows={4}
                     className="w-full p-4 rounded-none border border-input bg-background focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none placeholder:text-muted-foreground/50"
-                    placeholder="TRANSMIT MESSAGE..."
+                    placeholder="Tell us about your project requirements..."
                   />
                 </div>
                 
                 <Button size="lg" className="w-full gap-2 h-14 text-base font-bold bg-foreground text-background hover:bg-foreground/90">
-                  TRANSMIT <Send size={18} />
+                  Send Message <Send size={18} />
                 </Button>
               </form>
             </div>

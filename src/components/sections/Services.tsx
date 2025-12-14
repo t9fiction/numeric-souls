@@ -7,34 +7,34 @@ import { cn } from "@/lib/utils";
 
 const services = [
   {
-    title: "Agentic AI & Automation",
-    description: "LLMs, autonomous agents, and intelligent workflow automation.",
-    icon: <Bot size={24} />,
-  },
-  {
-    title: "Blockchain Solutions",
-    description: "Smart contracts, decentralized apps (dApps), and Web3 integration.",
-    icon: <Blocks size={24} />,
-  },
-  {
-    title: "Web Architecture",
-    description: "Enterprise-grade web applications with React and Next.js.",
+    title: "Enterprise Software Development",
+    description: "Custom enterprise applications built with modern frameworks and best practices.",
     icon: <Code size={24} />,
   },
   {
-    title: "Cloud Infrastructure",
-    description: "Serverless architecture and DevOps automation.",
+    title: "Cloud Architecture & DevOps",
+    description: "Scalable cloud infrastructure with automated deployment and monitoring.",
     icon: <Database size={24} />,
   },
   {
-    title: "Mobile Ecosystems",
-    description: "Cross-platform solutions for iOS and Android.",
+    title: "Digital Transformation",
+    description: "Legacy system modernization and digital workflow optimization.",
+    icon: <Globe size={24} />,
+  },
+  {
+    title: "AI & Machine Learning",
+    description: "Intelligent automation and data-driven decision support systems.",
+    icon: <Bot size={24} />,
+  },
+  {
+    title: "Mobile Application Development",
+    description: "Native and cross-platform mobile solutions for enterprise use.",
     icon: <Smartphone size={24} />,
   },
   {
-    title: "Design Systems",
-    description: "Pixel-perfect UI/UX that scales with your brand.",
-    icon: <Palette size={24} />,
+    title: "System Integration",
+    description: "Seamless integration of enterprise systems and third-party services.",
+    icon: <Blocks size={24} />,
   },
 ];
 
@@ -45,9 +45,9 @@ const Services = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4 text-foreground">CORE CAPABILITIES</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto font-mono text-sm tracking-wide">
-            SYSTEM_STATUS: OPERATIONAL
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4 text-foreground">OUR SERVICES</h2>
+          <p className="text-muted-foreground max-w-xl mx-auto text-lg">
+            Comprehensive software solutions tailored for enterprise success
           </p>
         </div>
 
