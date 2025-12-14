@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Smartphone, Brain, Globe, Database, Palette } from "lucide-react";
+import { Code, Smartphone, Bot, Globe, Database, Palette, Blocks } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const services = [
@@ -17,9 +17,9 @@ const services = [
     icon: <Smartphone size={24} />,
   },
   {
-    title: "AI & Neural Networks",
-    description: "Intelligent automation and predictive modeling.",
-    icon: <Brain size={24} />,
+    title: "Agentic AI & Automation",
+    description: "LLMs, autonomous agents, and intelligent workflow automation.",
+    icon: <Bot size={24} />,
   },
   {
     title: "Design Systems",
@@ -32,9 +32,9 @@ const services = [
     icon: <Database size={24} />,
   },
   {
-    title: "Global Strategy",
-    description: "Digital transformation consulting for scale.",
-    icon: <Globe size={24} />,
+    title: "Blockchain Solutions",
+    description: "Smart contracts, decentralized apps (dApps), and Web3 integration.",
+    icon: <Blocks size={24} />,
   },
 ];
 
