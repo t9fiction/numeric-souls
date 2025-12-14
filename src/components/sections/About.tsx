@@ -44,7 +44,7 @@ const About = () => {
                 <div>
                   <h4 className="font-bold text-foreground mb-1">Human-Centric Tech</h4>
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    We believe the best code is written by people who understand people.
+                    We believe in building software that doesn&apos;t just work—it evolves. Our philosophy is rooted in precision engineering and user-centric design.
                   </p>
                 </div>
               </div>

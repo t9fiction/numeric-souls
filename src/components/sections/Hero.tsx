@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Terminal } from "lucide-react";
-import Floating3DShapes from "@/components/ui/Floating3DShapes";
+import HeroScene from "@/components/ui/HeroScene";
 
 const Hero = () => {
   return (
@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none" />
       
       {/* 3D Floating Elements */}
-      <Floating3DShapes />
+      <HeroScene />
       
       {/* Beam Effect - Adaptive */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-foreground/5 rounded-full blur-[100px] opacity-20 pointer-events-none" />
@@ -45,7 +45,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="max-w-xl mx-auto mb-10 text-lg leading-relaxed text-muted-foreground md:text-xl"
         >
-          We build digital infrastructure for the world's most demanding enterprises. Absolute clarity. Zero compromise.
+          We build digital infrastructure for the world&apos;s most demanding enterprises. Absolute clarity. Zero compromise.
         </motion.p>
 
         <motion.div
