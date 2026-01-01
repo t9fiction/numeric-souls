@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Code2, Github, Twitter, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
@@ -8,11 +9,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-8 h-8 flex items-center justify-center text-foreground border border-foreground/20 group-hover:bg-foreground group-hover:text-background transition-colors">
-                <Code2 size={20} />
+              <div className="relative w-8 h-8 flex items-center justify-center overflow-hidden rounded-md">
+                <Image 
+                  src="/logo.png" 
+                  alt="Numeric Souls Logo" 
+                  fill
+                  className="object-cover"
+                />
               </div>
               <span className="text-xl font-bold tracking-tighter text-foreground">
-                Numeric Shift
+                Numeric Souls
               </span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
@@ -51,7 +57,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs font-mono text-muted-foreground">© {new Date().getFullYear()} NUMERIC SHIFT. ALL RIGHTS RESERVED.</p>
+          <p className="text-xs font-mono text-muted-foreground">© {new Date().getFullYear()} NUMERIC SOULS. ALL RIGHTS RESERVED.</p>
           <div className="flex gap-6 text-xs font-mono text-muted-foreground">
             <Link href="#" className="hover:text-foreground">PRIVACY</Link>
             <Link href="#" className="hover:text-foreground">TERMS</Link>

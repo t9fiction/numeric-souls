@@ -7,7 +7,7 @@ import * as THREE from "three";
 import React from "react";
 
 function LorenzAttractor() {
-  const ref = useRef<any>();
+  const ref = useRef<any>(null);
 
   // Calculate the Lorenz Attractor points
   const points = useMemo(() => {

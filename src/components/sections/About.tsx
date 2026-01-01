@@ -35,7 +35,7 @@ const About = () => {
             <div className="relative aspect-square w-full max-w-md mx-auto lg:max-w-full overflow-hidden rounded-sm border border-border">
               <Image
                 src={teamCollabImage}
-                alt="Numeric Shift engineers collaborating"
+                alt="Numeric Souls engineers collaborating"
                 fill
                 className="object-cover"
                 placeholder="blur"
@@ -70,7 +70,7 @@ const About = () => {
               Trusted Technology Partner. <br /> Proven Results.
             </h2>
             <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              Numeric Shift delivers enterprise-grade software solutions with a focus on scalability, security, and performance. Our team of senior engineers and architects brings decades of experience in building mission-critical systems for global organizations.
+              Numeric Souls delivers enterprise-grade software solutions with a focus on scalability, security, and performance. Our team of senior engineers and architects brings decades of experience in building mission-critical systems for global organizations.
             </p>
             
             <ul className="space-y-4 mb-8">

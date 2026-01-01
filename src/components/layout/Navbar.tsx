@@ -2,12 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { cn } from "@/lib/utils";
-import Logo3D from "@/components/ui/Logo3D";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,9 +40,16 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0 flex items-center gap-2">
             <Link href="/" className="flex items-center gap-2 group">
-              <Logo3D />
+              <div className="relative w-10 h-10 overflow-hidden rounded-lg">
+                <Image 
+                  src="/logo.png" 
+                  alt="Numeric Souls Logo" 
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <span className="text-xl font-bold tracking-tighter text-foreground">
-                Numeric Shift
+                Numeric Souls
               </span>
             </Link>
           </div>

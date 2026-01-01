@@ -18,8 +18,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Numeric Shift | Precision Engineering",
-  description: "Numeric Shift is a premium software house building digital infrastructure.",
+  title: "Numeric Souls | Precision Engineering",
+  description: "Numeric Souls is a premium software house building digital infrastructure.",
 };
 
 export default function RootLayout({
