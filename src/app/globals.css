@@ -1,81 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  /* LIGHT: Soft Professional */
-  /* Background: #c8d1d7 (User Requested Light) */
-  --background: #c8d1d7;
-  /* Foreground: #0a0a0a (High Contrast) */
-  --foreground: #0a0a0a;
-  
-  /* Card: #ffffff (White cards contrast well with gray bg) */
-  --card: #ffffff;
-  --card-foreground: #0a0a0a;
-  
-  --popover: #ffffff;
-  --popover-foreground: #0a0a0a;
-  
-  /* Primary: Indigo-600 #4f46e5 */
-  --primary: #4f46e5;
-  --primary-foreground: #ffffff;
-  
-  /* Secondary: #e4e6eb (Slightly darker for inputs/secondary actions) */
-  --secondary: #e4e6eb;
-  --secondary-foreground: #0a0a0a;
-  
-  /* Muted: #f3f4f6 */
-  --muted: #f3f4f6;
-  --muted-foreground: #4b5563;
-  
-  --accent: #e4e6eb;
-  --accent-foreground: #0a0a0a;
-  
-  --destructive: #ef4444;
-  --destructive-foreground: #f6f8fa;
-  
-  /* Border: #94a3b8 (Slate 400 - Clear boundary) */
-  --border: #94a3b8;
-  --input: #94a3b8;
-  --ring: #4f46e5;
-  
-  --radius: 0rem;
+  --background: #FFFFFF;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #2563EB;
+  --primary-foreground: #FFFFFF;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #1E293B;
+  --muted: #F8FAFC;
+  --muted-foreground: #64748B;
+  --accent: #F1F5F9;
+  --accent-foreground: #1E293B;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #2563EB;
+  --radius: 0.5rem;
 }
 
 .dark {
-  /* DARK: Custom Deep Navy #0d1017 */
-  /* Background: #050505 (User Requested Dark) */
-  --background: #050505;
-  /* Foreground: #e6edf3 (High contrast off-white) */
-  --foreground: #e6edf3;
-  
-  /* Card: #161b22 (Slightly lighter than bg for hierarchy) */
-  --card: #161b22;
-  --card-foreground: #e6edf3;
-  
-  --popover: #161b22;
-  --popover-foreground: #e6edf3;
-  
-  /* Primary: Indigo-500 #6366f1 */
-  --primary: #6366f1;
-  --primary-foreground: #ffffff;
-  
-  /* Secondary: #21262d */
-  --secondary: #21262d;
-  --secondary-foreground: #e6edf3;
-  
-  /* Muted: #161b22 */
-  --muted: #161b22;
-  --muted-foreground: #7d8590; /* Muted text */
-  
-  --accent: #21262d;
-  --accent-foreground: #e6edf3;
-  
-  --destructive: #7f1d1d;
-  --destructive-foreground: #fef2f2;
-  
-  /* Border: #30363d (Subtle boundary) */
-  --border: #30363d;
-  --input: #30363d;
-  --ring: #6366f1;
+  --background: #121212;
+  --foreground: #E0E0E0;
+  --card: #1E1E1E;
+  --card-foreground: #E0E0E0;
+  --popover: #1E1E1E;
+  --popover-foreground: #E0E0E0;
+  --primary: #00BFFF;
+  --primary-foreground: #121212;
+  --secondary: #1C2A3A;
+  --secondary-foreground: #E0E0E0;
+  --muted: #1E1E1E;
+  --muted-foreground: #A0A0A0;
+  --accent: #1C2A3A;
+  --accent-foreground: #E0E0E0;
+  --destructive: #B22222;
+  --destructive-foreground: #E0E0E0;
+  --border: #2D2D2D;
+  --input: #2D2D2D;
+  --ring: #00BFFF;
 }
 
 @theme {
@@ -111,7 +79,7 @@
   --radius-md: var(--radius);
   --radius-lg: calc(var(--radius) + 2px);
 
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Roboto", var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
 }
 

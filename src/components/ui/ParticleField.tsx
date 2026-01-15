@@ -13,10 +13,14 @@ function ParticleSystem() {
 
   const particlesPosition = useMemo(() => {
     const positions = new Float32Array(100 * 3);
+    // Use a seeded random approach or generate positions deterministically
     for (let i = 0; i < 100; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 10;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 10;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+      // Simple deterministic positioning based on index
+      const angle = (i / 100) * Math.PI * 2;
+      const radius = (i % 10) * 0.5;
+      positions[i * 3] = Math.cos(angle) * radius;
+      positions[i * 3 + 1] = Math.sin(angle) * radius;
+      positions[i * 3 + 2] = (i % 5 - 2) * 2;
     }
     return positions;
   }, []);

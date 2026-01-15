@@ -52,7 +52,7 @@ function LorenzAttractor() {
         color="#4f46e5"       // Default
         lineWidth={2}         // In pixels (default)
         dashed={false}
-        vertexColors={[[0.2, 0.2, 1], [1, 0.2, 0.2]] as any} // Optional gradient attempt (needs correct prop format)
+        vertexColors={[[0.2, 0.2, 1], [1, 0.2, 0.2]] as [number, number, number][]} // Optional gradient attempt (needs correct prop format)
       >
          {/* Gradient Material for cool tech look */}
          <lineBasicMaterial color="#4f46e5" opacity={0.8} transparent />

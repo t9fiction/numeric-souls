@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Code, Smartphone, Bot, Globe, Database, Blocks } from "lucide-react";
-import { cn } from "@/lib/utils";
 import AnimatedGrid from "@/components/ui/AnimatedGrid";
 import Link from "next/link";
 

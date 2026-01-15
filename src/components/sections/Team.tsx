@@ -4,35 +4,16 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
-const teamFilters = [
-  {
-    name: "Leadership",
-    active: true,
-  },
-  {
-    name: "Development",
-    active: false,
-  },
-  {
-    name: "Design",
-    active: false,
-  },
-  {
-    name: "Marketing",
-    active: false,
-  },
-];
-
 const teamMembers = [
   {
-    name: "Alex Morgan",
+    name: "Sohail Ishaque",
     role: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2544&auto=format&fit=crop",
+    image: "/images/sohail_ishaque.png",
     bio: "Visionary leader with 15+ years in tech innovation.",
     social: {
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/sohail-ishaque/",
       twitter: "#",
-      github: "#",
+      github: "https://github.com/t9fiction",
     },
   },
   {

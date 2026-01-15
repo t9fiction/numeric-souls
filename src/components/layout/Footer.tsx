@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Code2, Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (

@@ -4,7 +4,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 const Contact = () => {
   return (
@@ -31,7 +30,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-bold text-foreground uppercase tracking-wide text-sm">Email</h4>
-                  <p className="text-muted-foreground font-mono text-sm">hello@numericshift.com</p>
+                  <p className="text-muted-foreground font-mono text-sm">sohail.sohailishaq@gmail.com</p>
                 </div>
               </div>
               

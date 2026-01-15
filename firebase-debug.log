@@ -1,0 +1,12 @@
+[debug] [2026-01-15T18:06:13.682Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T18:06:13.685Z] > authorizing via signed-in user (sohail.sohailishaq@gmail.com)
+[debug] [2026-01-15T18:06:13.709Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T18:06:13.710Z] > authorizing via signed-in user (sohail.sohailishaq@gmail.com)
+[debug] [2026-01-15T18:06:13.772Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T18:06:13.773Z] > authorizing via signed-in user (sohail.sohailishaq@gmail.com)
+[debug] [2026-01-15T18:06:13.775Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T18:06:13.775Z] > authorizing via signed-in user (sohail.sohailishaq@gmail.com)
+[debug] [2026-01-15T18:06:13.782Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T18:06:13.782Z] > authorizing via signed-in user (sohail.sohailishaq@gmail.com)
+[debug] [2026-01-15T18:06:13.784Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-15T18:06:13.784Z] > authorizing via signed-in user (sohail.sohailishaq@gmail.com)

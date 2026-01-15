@@ -1,63 +1,47 @@
 "use client";
 
-import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef } from "react";
-import { useTheme } from "next-themes";
-import * as THREE from "three";
+import React, { useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Box, Text } from '@react-three/drei';
+import * as THREE from 'three';
 
 function AnimatedLogo() {
-  const groupRef = useRef<THREE.Group>(null);
-  const { theme } = useTheme();
-  const isDark = theme === "dark";
+  const meshRef = useRef<THREE.Group>(null!);
 
   useFrame((state) => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
-      groupRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.8) * 0.05;
+    const time = state.clock.getElapsedTime();
+    if (meshRef.current) {
+      meshRef.current.rotation.x = Math.sin(time * 0.5) * 0.2;
+      meshRef.current.rotation.y = Math.cos(time * 0.5) * 0.2;
     }
   });
 
+  const textOptions = {
+    color: 'white',
+    anchorX: 'center' as const,
+    anchorY: 'middle' as const,
+    fontSize: 2,
+    font: 'https://fonts.gstatic.com/s/roboto/v27/KFOmCnqEu92Fr1Mu4mxK.woff',
+  };
+
   return (
-    <group ref={groupRef}>
-      {/* N */}
-      <mesh position={[-0.6, 0, 0]}>
-        <boxGeometry args={[0.1, 0.8, 0.1]} />
-        <meshStandardMaterial color={isDark ? "#3b82f6" : "#1e40af"} />
-      </mesh>
-      <mesh position={[-0.4, 0, 0]} rotation={[0, 0, Math.PI / 4]}>
-        <boxGeometry args={[0.1, 0.6, 0.1]} />
-        <meshStandardMaterial color={isDark ? "#3b82f6" : "#1e40af"} />
-      </mesh>
-      <mesh position={[-0.2, 0, 0]}>
-        <boxGeometry args={[0.1, 0.8, 0.1]} />
-        <meshStandardMaterial color={isDark ? "#3b82f6" : "#1e40af"} />
-      </mesh>
-      
-      {/* S */}
-      <mesh position={[0.2, 0.2, 0]}>
-        <boxGeometry args={[0.3, 0.1, 0.1]} />
-        <meshStandardMaterial color={isDark ? "#8b5cf6" : "#7c3aed"} />
-      </mesh>
-      <mesh position={[0.2, 0, 0]}>
-        <boxGeometry args={[0.3, 0.1, 0.1]} />
-        <meshStandardMaterial color={isDark ? "#8b5cf6" : "#7c3aed"} />
-      </mesh>
-      <mesh position={[0.2, -0.2, 0]}>
-        <boxGeometry args={[0.3, 0.1, 0.1]} />
-        <meshStandardMaterial color={isDark ? "#8b5cf6" : "#7c3aed"} />
-      </mesh>
+    <group ref={meshRef}>
+      <Box args={[4, 4, 4]} material-color="blue" />
+      <Text position={[0, 0, 2.1]} {...textOptions}>
+        N
+      </Text>
     </group>
   );
 }
 
-export default function Logo3D() {
+const Logo3D = () => {
   return (
-    <div className="w-12 h-12">
-      <Canvas camera={{ position: [0, 0, 3], fov: 50 }}>
-        <ambientLight intensity={0.6} />
-        <pointLight position={[2, 2, 2]} intensity={0.8} />
-        <AnimatedLogo />
-      </Canvas>
-    </div>
+    <Canvas style={{ height: '400px', width: '400px' }}>
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[10, 10, 5]} intensity={1} />
+      <AnimatedLogo />
+    </Canvas>
   );
-}
+};
+
+export default Logo3D;

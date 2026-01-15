@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView, useSpring, useTransform } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { TrendingUp, Users, CheckCircle, BarChart3 } from "lucide-react";
 import DataVisualization from "@/components/ui/DataVisualization";
 

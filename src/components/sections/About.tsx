@@ -4,8 +4,13 @@ import React from "react";
 import Image from "next/image";
 import teamCollabImage from "@/assets/images/team-collab.png";
 import { motion } from "framer-motion";
-import { Users, Target, CheckCircle2 } from "lucide-react";
-import ParticleField from "@/components/ui/ParticleField";
+import { Users, CheckCircle2 } from "lucide-react";
+import dynamic from "next/dynamic";
+
+// Dynamically import ParticleField to avoid SSR issues
+const DynamicParticleField = dynamic(() => import("@/components/ui/ParticleField"), {
+  ssr: false,
+});
 
 const stats = [
   { label: "Combined Experience", value: "50+ Years" },
@@ -18,7 +23,7 @@ const About = () => {
     <section id="about" className="py-32 bg-secondary relative overflow-hidden transition-colors duration-300">
       {/* 3D Particle Field */}
       <div className="absolute inset-0 opacity-20">
-        <ParticleField />
+        <DynamicParticleField />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
