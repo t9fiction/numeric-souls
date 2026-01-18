@@ -108,18 +108,18 @@ const Hero = () => {
         >
           <div className="relative w-96 h-96 rounded-2xl overflow-hidden border border-border/50 shadow-xl">
             <Image
-              src="/hero-bg.jpg"
+              src="/images/hero-bg.jpg"
               alt="Professional software development workspace"
               fill
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+            {/* <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent" /> */}
 
             {/* Floating elements */}
-            <div className="absolute top-6 right-6 w-24 h-24 rounded-lg bg-primary/10 backdrop-blur-sm border border-border/30 flex items-center justify-center">
+            {/* <div className="absolute top-6 right-6 w-12 h-8 rounded-lg bg-primary/10 backdrop-blur-sm border border-border/30 flex items-center justify-center">
               <Code className="w-8 h-8 text-primary" />
-            </div>
+            </div> */}
             <div className="absolute bottom-6 left-6 w-32 h-16 rounded-lg bg-secondary/50 backdrop-blur-sm border border-border/30 flex items-center justify-center">
               <span className="text-sm font-medium">AI Integration</span>
             </div>
