@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ChevronRight, Code, Zap, Shield } from "lucide-react";
+import { Code, Zap, Shield } from "lucide-react";
 import AmbientBackground from "@/components/ui/AmbientBackground";
 import Image from "next/image";
 
