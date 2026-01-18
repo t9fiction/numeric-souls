@@ -57,10 +57,10 @@ function CodeStructure() {
       </Box>
 
       {/* Connection lines */}
-      {connections.map((points, index) => (
+      {connections.map((connectionPoints, index) => (
         <Line
           key={index}
-          points={points}
+          points={connectionPoints.map(coord => new THREE.Vector3(coord[0], coord[1], coord[2]))}
           color={isDark ? "#6b7280" : "#9ca3af"}
           lineWidth={2}
         />
