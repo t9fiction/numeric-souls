@@ -13,10 +13,10 @@ const Hero = () => {
       {/* Ambient Background & Grid */}
       <AmbientBackground />
 
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/10 pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-secondary/10 pointer-events-none" />
 
       {/* Beam Effect - Adaptive */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-primary/10 rounded-full blur-[100px] opacity-50 pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-250 h-100 bg-primary/10 rounded-full blur-[100px] opacity-50 pointer-events-none" />
 
       <div className="container relative z-10 px-4 mx-auto flex items-center justify-between">
         <div className="text-left max-w-3xl">
