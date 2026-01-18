@@ -5,6 +5,8 @@ import Portfolio from "@/components/sections/Portfolio";
 import About from "@/components/sections/About";
 import Team from "@/components/sections/Team";
 import Contact from "@/components/sections/Contact";
+import Testimonials from "@/components/sections/Testimonials";
+import ProjectCalculator from "@/components/sections/ProjectCalculator";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <Services />
       <Stats />
       <Portfolio />
+      <Testimonials />
+      <ProjectCalculator />
       <About />
       <Team />
       <Contact />
