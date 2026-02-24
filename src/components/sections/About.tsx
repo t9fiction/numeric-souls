@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import teamCollabImage from "@/assets/images/team-collab.png";
+// Using placeholder image instead of local asset
 import { motion } from "framer-motion";
 import { Users, CheckCircle2, Code, Zap, Shield } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -87,7 +87,7 @@ const About = () => {
           >
             <div className="relative aspect-square w-full max-w-md mx-auto lg:max-w-full overflow-hidden rounded-2xl border border-border shadow-xl">
               <Image
-                src={teamCollabImage}
+                src="https://picsum.photos/600/600?random=20"
                 alt="Numeric Souls engineers collaborating"
                 fill
                 className="object-cover"
