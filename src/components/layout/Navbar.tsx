@@ -23,9 +23,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Services", href: "/#services", hasDropdown: true },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Client Stories", href: "/client-stories" },
     { name: "Work", href: "/#portfolio" },
     { name: "About", href: "/#about" },
-    { name: "Team", href: "/#team" },
     { name: "Contact", href: "/#contact" },
   ];
 

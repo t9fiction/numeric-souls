@@ -2,52 +2,52 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Code, Smartphone, Bot, Globe, Database, Blocks, Server, Palette, Zap, ChevronRight } from "lucide-react";
+import { Code, Smartphone, Bot, Globe, Database, Blocks, Server, Palette, Zap, ChevronRight, Brain, Cloud } from "lucide-react";
 import AnimatedGrid from "@/components/ui/AnimatedGrid";
 import Link from "next/link";
 
 const services = [
   {
-    title: "Custom Software Development",
-    description: "Tailored solutions designed to meet your unique business requirements and challenges.",
-    icon: <Code size={24} />,
-    color: "from-blue-500 to-cyan-500",
-    slug: "custom-software-development",
-  },
-  {
     title: "AI & Machine Learning",
-    description: "Intelligent systems that learn, predict, and automate decision-making processes.",
-    icon: <Bot size={24} />,
-    color: "from-purple-500 to-indigo-500",
-    slug: "ai-machine-learning",
+    description: "Custom ML models, predictive analytics, NLP solutions, and intelligent automation systems.",
+    icon: <Brain size={24} />,
+    color: "from-cyan-500 to-blue-500",
+    slug: "agentic-ai-automation",
   },
   {
-    title: "Web Applications",
-    description: "Scalable, responsive web platforms built with modern frameworks and best practices.",
+    title: "Cloud Infrastructure & DevOps",
+    description: "Scalable cloud architecture, containerization, CI/CD pipelines, and infrastructure-as-code solutions.",
+    icon: <Cloud size={24} />,
+    color: "from-sky-500 to-cyan-500",
+    slug: "cloud-infrastructure",
+  },
+  {
+    title: "Blockchain Development",
+    description: "Smart contracts, DApps, and blockchain solutions on Ethereum, Solana, and other networks.",
+    icon: <Blocks size={24} />,
+    color: "from-blue-500 to-indigo-500",
+    slug: "blockchain-solutions",
+  },
+  {
+    title: "Full-Stack Web Development",
+    description: "Modern, scalable web applications with Next.js, React, TypeScript, and cutting-edge frontend frameworks.",
     icon: <Globe size={24} />,
+    color: "from-purple-500 to-pink-500",
+    slug: "web-architecture",
+  },
+  {
+    title: "DApp Development",
+    description: "Full-stack decentralized applications with intelligent frontends and robust smart contracts.",
+    icon: <Code size={24} />,
     color: "from-emerald-500 to-teal-500",
-    slug: "web-applications",
+    slug: "agentic-ai-automation",
   },
   {
-    title: "Mobile Development",
-    description: "Native and cross-platform mobile apps for iOS and Android ecosystems.",
-    icon: <Smartphone size={24} />,
-    color: "from-orange-500 to-amber-500",
-    slug: "mobile-development",
-  },
-  {
-    title: "Cloud Solutions",
-    description: "Secure, scalable cloud infrastructure and migration services for your business.",
+    title: "Backend & API Development",
+    description: "RESTful APIs, GraphQL services, microservices architecture, and real-time data systems with FastAPI and Node.js.",
     icon: <Server size={24} />,
-    color: "from-violet-500 to-purple-500",
-    slug: "cloud-solutions",
-  },
-  {
-    title: "UI/UX Design",
-    description: "User-centered design that creates intuitive and engaging digital experiences.",
-    icon: <Palette size={24} />,
-    color: "from-rose-500 to-pink-500",
-    slug: "ui-ux-design",
+    color: "from-orange-500 to-red-500",
+    slug: "web-architecture",
   },
 ];
 
@@ -81,7 +81,7 @@ const Services = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter mb-4 text-foreground max-w-3xl mx-auto"
           >
-            Comprehensive Digital Solutions
+            AI, Cloud & Enterprise Solutions
           </motion.h2>
 
           <motion.p
@@ -91,7 +91,7 @@ const Services = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground max-w-xl mx-auto text-lg"
           >
-            {'We deliver end-to-end technology solutions that transform businesses and drive growth'}
+            Comprehensive software engineering services combining AI/ML, cloud infrastructure, blockchain, and full-stack development
           </motion.p>
         </div>
 

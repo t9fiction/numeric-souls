@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Code, Palette, Cpu, Users } from "lucide-react";
+import { Github, Linkedin, Twitter, Code, Palette, Cpu, Users, Brain, Cloud, Blocks } from "lucide-react";
 import Image from "next/image";
 
 const teamMembers = [
@@ -9,8 +9,8 @@ const teamMembers = [
     name: "Sohail Ishaque",
     role: "CEO & Founder",
     image: "/images/sohail_ishaque.png",
-    bio: "Visionary leader with 15+ years in tech innovation.",
-    expertise: ["Leadership", "Strategy", "Business"],
+    bio: "Visionary leader with 15+ years in tech innovation specializing in AI, Cloud, and Blockchain solutions.",
+    expertise: ["Leadership", "Strategy", "AI/ML", "Blockchain"],
     social: {
       linkedin: "https://www.linkedin.com/in/sohail-ishaque/",
       twitter: "#",
@@ -20,9 +20,9 @@ const teamMembers = [
   {
     name: "Sarah Chen",
     role: "CTO",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop",
-    bio: "Architecture expert ensuring scalable and robust solutions.",
-    expertise: ["Architecture", "DevOps", "Security"],
+    image: "https://randomuser.me/api/portraits/women/32.jpg",
+    bio: "Cloud infrastructure architect with expertise in DevOps, Kubernetes, and scalable system design.",
+    expertise: ["Architecture", "Cloud", "DevOps", "Security"],
     social: {
       linkedin: "#",
       twitter: "#",
@@ -32,9 +32,9 @@ const teamMembers = [
   {
     name: "Michael Ross",
     role: "Lead Designer",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2670&auto=format&fit=crop",
-    bio: "Award-winning designer passionate about user experience.",
-    expertise: ["UI/UX", "Design Systems", "Research"],
+    image: "https://randomuser.me/api/portraits/men/22.jpg",
+    bio: "Award-winning designer passionate about creating intuitive experiences for complex AI and blockchain applications.",
+    expertise: ["UI/UX", "Design Systems", "Web3 Design"],
     social: {
       linkedin: "#",
       twitter: "#",
@@ -43,9 +43,9 @@ const teamMembers = [
   },
   {
     name: "Emily Watson",
-    role: "Senior Developer",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2661&auto=format&fit=crop",
-    bio: "Full-stack wizard turning complex requirements into clean code.",
+    role: "Senior Full-Stack Engineer",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
+    bio: "ML engineer and full-stack developer building intelligent systems, cloud infrastructure, and decentralized applications.",
     expertise: ["Full-Stack", "AI/ML", "Cloud"],
     social: {
       linkedin: "#",
@@ -60,14 +60,16 @@ const expertiseIcons: Record<string, React.ReactElement> = {
   "Strategy": <Cpu className="w-4 h-4" />,
   "Business": <Cpu className="w-4 h-4" />,
   "Architecture": <Cpu className="w-4 h-4" />,
-  "DevOps": <Cpu className="w-4 h-4" />,
+  "DevOps": <Cloud className="w-4 h-4" />,
   "Security": <Cpu className="w-4 h-4" />,
   "UI/UX": <Palette className="w-4 h-4" />,
   "Design Systems": <Palette className="w-4 h-4" />,
+  "Web3 Design": <Palette className="w-4 h-4" />,
   "Research": <Palette className="w-4 h-4" />,
   "Full-Stack": <Code className="w-4 h-4" />,
-  "AI/ML": <Code className="w-4 h-4" />,
-  "Cloud": <Code className="w-4 h-4" />,
+  "AI/ML": <Brain className="w-4 h-4" />,
+  "Cloud": <Cloud className="w-4 h-4" />,
+  "Blockchain": <Blocks className="w-4 h-4" />,
 };
 
 export default function Team() {

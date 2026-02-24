@@ -1,11 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, Clock, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      (e.target as HTMLFormElement).reset();
+      // Reset submitted state after 3 seconds
+      setTimeout(() => setSubmitted(false), 3000);
+    }, 1000);
+  };
   return (
     <section id="contact" className="py-24 bg-secondary/40 transition-colors duration-300">
       <div className="container mx-auto px-4 relative z-10">
@@ -28,7 +44,7 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter mb-4 text-foreground max-w-3xl mx-auto"
           >
-            Ready to Transform Your Business?
+            Let's Build Something Exceptional
           </motion.h2>
 
           <motion.p
@@ -38,7 +54,7 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground max-w-xl mx-auto text-lg"
           >
-            {'Reach out to our team to discuss your project requirements and discover how we can help you achieve your goals'}
+            {"Whether you need AI/ML solutions, cloud infrastructure, blockchain development, or full-stack applications, let's connect and discuss your vision."}
           </motion.p>
         </div>
 
@@ -112,7 +128,7 @@ const Contact = () => {
             <div className="bg-card border border-border rounded-xl p-8">
               <h3 className="text-xl font-bold mb-6 text-foreground">Send Us a Message</h3>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium text-foreground">Full Name</label>
@@ -162,8 +178,14 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button size="lg" className="w-full gap-2 h-14 text-base font-bold bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg">
-                  Send Message <Send size={18} />
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full gap-2 h-14 text-base font-bold bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg disabled:opacity-50"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : submitted ? 'Message Sent! ✓' : 'Send Message'}
+                  <Send size={18} />
                 </Button>
               </form>
             </div>

@@ -6,35 +6,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Users, CheckCircle2, Code, Zap, Shield } from "lucide-react";
 import dynamic from "next/dynamic";
+import { companyStats, companyValues } from "@/data/portfolio";
 
 // Dynamically import ParticleField to avoid SSR issues
 const DynamicParticleField = dynamic(() => import("@/components/ui/ParticleField"), {
   ssr: false,
 });
-
-const stats = [
-  { label: "Years of Excellence", value: "5+" },
-  { label: "Projects Delivered", value: "200+" },
-  { label: "Happy Clients", value: "150+" },
-];
-
-const values = [
-  {
-    icon: <Zap className="w-6 h-6 text-primary" />,
-    title: "Innovation",
-    description: "We embrace cutting-edge technologies to deliver forward-thinking solutions."
-  },
-  {
-    icon: <Shield className="w-6 h-6 text-primary" />,
-    title: "Reliability",
-    description: "Robust, secure solutions built to withstand the test of time."
-  },
-  {
-    icon: <Code className="w-6 h-6 text-primary" />,
-    title: "Excellence",
-    description: "Uncompromising quality in every line of code we write."
-  }
-];
 
 const About = () => {
   return (
@@ -62,7 +39,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter mb-4 text-foreground max-w-3xl mx-auto"
           >
-            Pioneering Digital Innovation Since 2020
+            Software Engineering Excellence
           </motion.h2>
 
           <motion.p
@@ -72,7 +49,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground max-w-xl mx-auto text-lg"
           >
-            {'We blend technical expertise with creative vision to deliver transformative software solutions'}
+            {'Full-stack expertise in AI/ML, cloud infrastructure, blockchain, and enterprise software development'}
           </motion.p>
         </div>
 
@@ -85,13 +62,13 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative aspect-square w-full max-w-md mx-auto lg:max-w-full overflow-hidden rounded-2xl border border-border shadow-xl">
+            <div className="relative aspect-square w-full max-w-sm mx-auto lg:max-w-lg overflow-hidden rounded-2xl border border-border shadow-xl">
               <Image
-                src="https://picsum.photos/600/600?random=20"
-                alt="Numeric Souls engineers collaborating"
+                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=800&fit=crop"
+                alt="Numeric Souls engineers collaborating on AI and cloud solutions"
                 fill
                 className="object-cover"
-                placeholder="blur"
+                // placeholder="blur"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             </div>
@@ -111,11 +88,11 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              At Numeric Souls, we specialize in transforming complex business challenges into elegant, scalable software solutions. Our team of seasoned engineers, designers, and strategists collaborate to deliver products that not only meet today's needs but anticipate tomorrow's opportunities.
+              With expertise spanning AI/ML solutions, cloud infrastructure, blockchain development, and full-stack web applications, we deliver secure and scalable solutions across industries. From intelligent data systems to decentralized applications, every project is built with precision, security, and innovation at its core.
             </p>
 
             <div className="grid grid-cols-3 gap-6 mb-8">
-              {stats.map((stat, index) => (
+              {companyStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-2xl font-bold text-primary tracking-tight">{stat.value}</div>
                   <div className="text-xs font-medium text-muted-foreground uppercase mt-1">{stat.label}</div>
@@ -124,17 +101,24 @@ const About = () => {
             </div>
 
             <div className="space-y-6">
-              {values.map((value, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="p-3 bg-primary/10 rounded-lg mt-1">
-                    {value.icon}
+              {companyValues.map((value, index) => {
+                const icons = [
+                  <Zap key="zap" className="w-6 h-6 text-primary" />,
+                  <Shield key="shield" className="w-6 h-6 text-primary" />,
+                  <Code key="code" className="w-6 h-6 text-primary" />,
+                ];
+                return (
+                  <div key={index} className="flex items-start gap-4">
+                    <div className="p-3 bg-primary/10 rounded-lg mt-1">
+                      {icons[index]}
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">{value.title}</h3>
+                      <p className="text-sm text-muted-foreground">{value.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-foreground mb-1">{value.title}</h3>
-                    <p className="text-sm text-muted-foreground">{value.description}</p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </motion.div>
         </div>
